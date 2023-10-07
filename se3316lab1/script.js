@@ -1,6 +1,40 @@
 const countryTextInput = document.getElementById("searchByCountryName"); //gets the input from text box for the countries
 const divULResults = document.getElementById("resultsSearchDisplay"); //reference the ul within the div
 
+function getHTMLCountryData() {
+  const dataListITems = []; // stores extracted list 
+  const itemList = document.querySelectorAll("#resultsSearchDisplay li"); // selects li elements
+
+  itemList.forEach(li => {
+      const countryName = li.querySelector("h2").innerText; //selects name as header 
+      const imageSrc = li.querySelector("img").src;  //selects list items for images from HTML file
+      const countryCurrency = li.querySelector("p").innerText.split(":")[1].trim(); //gets the currency from HTML file
+      const regionsOfCountry = li.querySelectorAll("p")[1].innerText.split(":")[1].trim(); //gets the regions of each country
+      const link = li.querySelector("a").href; // gets the link from the HTML document
+      
+      const itemData = { //creates structure to hold all data
+          name: countryName,
+          imageSrc: imageSrc,
+          currency: countryCurrency,
+          regions: regionsOfCountry,
+          link
+      };
+
+      dataListITems.push(itemData); // adds the extracted data to the array
+  });
+
+  return dataListITems; //returns dataList items 
+}
+
+const countriesData = getHTMLCountryData();
+
+function searchCountriesByNameforDivSearch(searchBarInput) { //function to search through div's unordered list elemeents
+  const results = countriesData.filter(country =>   //filters input using query input 
+    country.name.toLowerCase().includes(searchBarInput.toLowerCase()) //changes input to lowercase to avoid case sensititivty
+  );
+
+  return results;
+}
 
 //from lab 1, input validation for search bars
 

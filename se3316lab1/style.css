@@ -19,10 +19,22 @@
 }
 
 #resultsSearchDisplay {
-
     padding: 8px;
     margin-top: 8px;
     list-style-type: none;
+}
+
+#resultsSearchDisplay li {
+    background-color: #C8C8C8;  /* Slightly lighter grey for list items */
+    border: 1px solid #F8F8F8;  /* Border for list items */
+    margin-bottom: 12px;  /* Space between list items */
+    padding: 12px;  /* Padding inside list items */
+    list-style-type: none;  /* No bullets */
+}
+
+#resultsSearchDisplay {
+    display: none;  /* This hides the div initially */
+    /* ... other styles ... */
 }
 
 
