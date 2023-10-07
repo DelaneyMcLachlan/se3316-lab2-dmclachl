@@ -36,6 +36,66 @@ function searchCountriesByNameforDivSearch(searchBarInput) { //function to searc
   return results;
 }
 
+countryTextInput.addEventListener("input", function() { //event listener for searching
+    
+    if(countryTextInput.value.trim() === "") {    //when there is no input, hide the options
+        divULResults.style.display = "none";
+    } else {
+        divULResults.style.display = "block"; //blocks style display of hiding if text is input
+
+        
+        
+        while (divULResults.firstChild) { //removes current searc results
+            divULResults.removeChild(divULResults.firstChild);
+        }
+        
+        var queryInput = countryTextInput.value.toLowerCase(); //retrieve search input and search
+        var results = searchCountriesByNameforDivSearch(queryInput);
+
+        var unorderedListElement = document.getElementById("resultsSearchDisplay"); //creats clone of unordered list elements for resultsSearchDisplay UL
+        var unorderedListClone = unorderedListElement.cloneNode(true);
+
+        //loops through every list element 
+        results.forEach(function(result) {
+            var liItem = document.createElement("li"); //for all unordered list items create element 
+            liItem.className = "list-item";  // Apply the shared class
+
+            var h2 = document.createElement("h2"); //creates elements from all h2 headings which includes the title
+            h2.textContent = result.name;          //grabbed from the HTML file
+
+            var img = document.createElement("img"); //creates elements for all unordered list item information 
+            img.src = result.imageSrc; 
+
+            var currencyP = document.createElement("p");
+            currencyP.textContent = "Currency: " + result.currency;
+
+            var regionsP = document.createElement("p");
+            regionsP.textContent = "Regions: " + result.regions;
+
+            var linkA = document.createElement("a"); //grab href items 
+            linkA.href = result.link; 
+            linkA.textContent = "Wikipedia Link";
+            linkA.target = "_blank"; 
+
+            
+            liItem.appendChild(h2); //appends child to all serach results
+            liItem.appendChild(img);
+            liItem.appendChild(currencyP);
+            liItem.appendChild(regionsP); 
+            liItem.appendChild(linkA);
+
+            unorderedListClone.appendChild(liItem); //clones items 
+        });
+
+        divULResults.appendChild(unorderedListClone); //add cloned item to the div unordered search results list
+    }
+});
+
+// Ensure the div is hidden on page load
+document.addEventListener("HideDivUL", function() {
+  divULResults.style.display = "none";
+});
+
 //from lab 1, input validation for search bars
 
 const currencyTextInput = document.getElementById("searchByCurrency");
