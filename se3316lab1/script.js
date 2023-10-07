@@ -36,6 +36,12 @@ function searchCountriesByNameforDivSearch(searchBarInput) { //function to searc
   return results;
 }
 
+function searchCountriesByCurrencyForDivSearch(searchBarInput) {
+  return countriesData.filter(country => 
+      country.currency.toLowerCase().includes(searchBarInput.toLowerCase())
+  );
+}
+
 countryTextInput.addEventListener("input", function() { //event listener for searching
     
     if(countryTextInput.value.trim() === "") {    //when there is no input, hide the options
@@ -43,8 +49,6 @@ countryTextInput.addEventListener("input", function() { //event listener for sea
     } else {
         divULResults.style.display = "block"; //blocks style display of hiding if text is input
 
-        
-        
         while (divULResults.firstChild) { //removes current searc results
             divULResults.removeChild(divULResults.firstChild);
         }
@@ -60,29 +64,29 @@ countryTextInput.addEventListener("input", function() { //event listener for sea
             var liItem = document.createElement("li"); //for all unordered list items create element 
             liItem.className = "list-item";  // Apply the shared class
 
-            var h2 = document.createElement("h2"); //creates elements from all h2 headings which includes the title
-            h2.textContent = result.name;          //grabbed from the HTML file
+            var countryName = document.createElement("h2"); //creates elements from all h2 headings which includes the title
+            countryName.textContent = result.name;          //grabbed from the HTML file
 
-            var img = document.createElement("img"); //creates elements for all unordered list item information 
-            img.src = result.imageSrc; 
+            var imageRef = document.createElement("img"); //creates elements for all unordered list item information 
+            imageRef.src = result.imageSrc; 
 
-            var currencyP = document.createElement("p");
-            currencyP.textContent = "Currency: " + result.currency;
+            var currencyElement = document.createElement("p");
+            currencyElement.textContent = "Currency: " + result.currency;
 
-            var regionsP = document.createElement("p");
-            regionsP.textContent = "Regions: " + result.regions;
+            var regionsElement = document.createElement("p");
+            regionsElement.textContent = "Regions: " + result.regions;
 
-            var linkA = document.createElement("a"); //grab href items 
-            linkA.href = result.link; 
-            linkA.textContent = "Wikipedia Link";
-            linkA.target = "_blank"; 
+            var linkRef = document.createElement("a"); //grab href items 
+            linkRef.href = result.link; 
+            linkRef.textContent = "Wikipedia Link";
+            linkRef.target = "_blank"; 
 
             
-            liItem.appendChild(h2); //appends child to all serach results
-            liItem.appendChild(img);
-            liItem.appendChild(currencyP);
-            liItem.appendChild(regionsP); 
-            liItem.appendChild(linkA);
+            liItem.appendChild(countryName); //appends child to all serach results
+            liItem.appendChild(imageRef);
+            liItem.appendChild(currencyElement);
+            liItem.appendChild(regionsElement); 
+            liItem.appendChild(linkRef);
 
             unorderedListClone.appendChild(liItem); //clones items 
         });
@@ -91,14 +95,70 @@ countryTextInput.addEventListener("input", function() { //event listener for sea
     }
 });
 
-// Ensure the div is hidden on page load
-document.addEventListener("HideDivUL", function() {
+
+document.addEventListener("HideDivUL", function() { //hides the div before search
   divULResults.style.display = "none";
 });
 
 //from lab 1, input validation for search bars
 
 const currencyTextInput = document.getElementById("searchByCurrency");
+const divCurrencyResults = document.getElementById("resultsSearchDisplay"); // Assume a different results div for currency search
+
+//same logic for currency search bar
+currencyTextInput.addEventListener("input", function() {
+    if(currencyTextInput.value.trim() === "") {    
+        divCurrencyResults.style.display = "none"; // Hide the results div when input is empty
+    } else {
+        divCurrencyResults.style.display = "block"; // Show the results div when input is present
+        
+        while (divCurrencyResults.firstChild) { 
+            divCurrencyResults.removeChild(divCurrencyResults.firstChild); // Clear previous results
+        }
+        
+        var queryInput = currencyTextInput.value.toLowerCase();
+        var results = searchCountriesByCurrencyForDivSearch(queryInput); // Use the new search function
+
+        var unorderedListElement = document.getElementById("resultsSearchDisplay"); 
+        var unorderedListClone = unorderedListElement.cloneNode(true);
+        
+        results.forEach(function(result) {
+            var liItem = document.createElement("li"); 
+            liItem.className = "list-item";  
+
+            var countryName = document.createElement("h2"); 
+            countryName.textContent = result.name;          
+
+            var imageRef = document.createElement("img"); 
+            imageRef.src = result.imageSrc; 
+
+            var currencyElement = document.createElement("p");
+            currencyElement.textContent = "Currency: " + result.currency;
+
+            var regionsElement = document.createElement("p");
+            regionsElement.textContent = "Regions: " + result.regions;
+
+            var linkRef = document.createElement("a"); 
+            linkRef.href = result.link; 
+            linkRef.textContent = "Wikipedia Link";
+            linkRef.target = "_blank"; 
+
+            liItem.appendChild(countryName); 
+            liItem.appendChild(imageRef);
+            liItem.appendChild(currencyElement);
+            liItem.appendChild(regionsElement); 
+            liItem.appendChild(linkRef);
+
+            unorderedListClone.appendChild(liItem); 
+        });
+
+        divCurrencyResults.appendChild(unorderedListClone); 
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() { //hides the div before loading 
+  divCurrencyResults.style.display = "none";
+});
 
 currencyTextInput.addEventListener("input", function() { //event listener for the currency text input
   let searchCurrencyValue = currencyTextInput.value; //temporary variable to hold value with restrictions
