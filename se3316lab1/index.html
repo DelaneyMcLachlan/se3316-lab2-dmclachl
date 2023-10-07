@@ -14,89 +14,94 @@
 <button id="countryNameSearchButton">Search Countries</button> <!-- defines the search button for programming action on click-->
 <input type="text" id="searchByCurrency" placeholder="Type Currency Here"> <!-- defines the text input box for currencies-->
 <button id="currencySearchButton">Search Currency</button> <!-- defines the text input box for currencies-->
-<h1> Countries:</h1>
-<!-- unordered list of countires-->
-<ul class="countries">
+
+<div id="searchResults"></div>
+
+ <ul id="resultsSearchDisplay"> <!-- New list on top of original list, same dataa-->
     <li>
-        <h2>Singapore</h2> <!-- Header text for all countries-->
-        <img src="images\sg.png"> <!-- Flag images -->
-        <p>Currency: SGD</p> <!-- displays currency as text -->
-        <p>Regions: Central Area, Tampines, Woodlands, Seletar, Jurong East</p> <!-- displays regions as text -->
-        <a href="https://en.wikipedia.org/wiki/Singapore">Wikipedia Link</a> <!-- attribute lists link and inserts link through text -->
+      <h2>Singapore</h2>
+      <img src="images/sg.png" alt="Flag of Singapore">
+      <p>Currency: SGD</p>
+     <p>Regions: Central Area, Tampines, Woodlands, Seletar, Jurong East<p>
+      <a href="https://en.wikipedia.org/wiki/Singapore">Wikipedia Link</a>
     </li>
     <li>
         <h2>Slovakia</h2>
-        <img src="images\sk.png">
+        <img src="images/sk.png" alt="Flag of Slovakia">
         <p>Currency: EUR</p>
         <p>Regions: Bratislava, Tnrnava, Trencin, Nitra, Zilina, Banska Bystrica, Presov, Kosice</p>
         <a href="https://en.wikipedia.org/wiki/Slovakia">Wikipedia Link</a>
-    </li>
-    <li>
+      </li>
+
+      <li>
         <h2>Slovenia</h2>
-        <img src="images\si.png">
+        <img src="images/si.png" alt="Flag of Slovakia">
         <p>Currency: EUR</p>
         <p>Regions: Mura, Drava, Carinthia, Savinja, Central Sava, Lower Sava, Carniola, Gorizia, Coastal-Karst</p>
         <a href="https://en.wikipedia.org/wiki/Slovenia">Wikipedia Link</a>
-    </li>
-    <li>
+      </li>
+    
+      <li>
         <h2>Solomon Islands</h2>
-        <img src="images\sb.png">
+        <img src="images/sb.png" alt="Flag of Solomon Islands">
         <p>Currency: SBD</p>
         <p>Regions: Central, Choiseul, Guadalcanal, Isabel, Makira-Ulawa, Malaita, Rennel and Bellona, Temotu, Western</p>
         <a href="https://en.wikipedia.org/wiki/Solomon_Islands">Wikipedia Link</a>
-    </li>
-    <li>
+      </li>
+    
+      <li>
         <h2>Somalia</h2>
-        <img src="images\so.png">
+        <img src="images/so.png" alt="Flag of Somalia">
         <p>Currency: SOS</p>
         <p>Regions: Benadir, Burao, Hargeisa, Hiran, Lower Juba, Bosaso, Mudug, Upper Juba</p>
         <a href="https://en.wikipedia.org/wiki/Somalia">Wikipedia Link</a>
-    </li>
-    <li>
+      </li>
+    
+      <li>
         <h2>South Africa</h2>
-        <img src="images\za.png">
+        <img src="images/za.png" alt="Flag of South Africa">
         <p>Currency: ZAR</p>
         <p>Regions: Botswana, Eswatini, Lesotho, Nimbia, South Africa</p>
         <a href="https://en.wikipedia.org/wiki/South_Africa">Wikipedia Link</a>
-    </li>
-    <li>
+      </li>
+      <li>
         <h2>South Sudan</h2>
-        <img src="images\ss.png">
+        <img src="images/ss.png " alt="Flag of South Sudan">
         <p>Currency: SSP</p> 
         <p>Regions: Lakes, Warrap, Western Equatoria, Jonglei, Unity, Upper Nile, Abyei Area, Greater Pibor Area, Ruweng</p>
         <a href="https://en.wikipedia.org/wiki/South_Sudan">Wikipedia Link</a>
     </li>
     <li>
         <h2>Spain</h2>
-        <img src="images\es.png">
+        <img src="images/es.png" alt="Flag of Spain">
         <p>Currency: EUR</p>
         <p>Regions: Andalusia, Aragon, Asturias, Balearic Islands, Basque Country, Canaray Islands, Cantabria, Castile and Leon, Castilla La Mancha, Catalonia, Galicia, Madrid, Murcis, Navarre, Valencia</p>
         <a href="https://en.wikipedia.org/wiki/Spain">Wikipedia Link</a>
     </li>
     <li>
         <h2>Sri Lanka</h2>
-        <img src="images\sd.png">
+        <img src="images/lk.png" alt="Flag of Sri Lanka">
         <p>Currency: LKR</p>
         <p>Regions: Northern Province, North Central Province, North Western Province, Western Province, Southern Province, Uva Province</p>
         <a href="https://en.wikipedia.org/wiki/Sri_Lanka">Wikipedia Link</a>
     </li>
     <li>
         <h2>Sudan</h2>
-        <img src="images\sd.png">
+        <img src="images/sd.png" alt="Flag of Sudan"> 
         <p>Currency: SDG</p>
         <p>Regions: Sudanian savanna</p>
         <a href="https://en.wikipedia.org/wiki/Sudan">Wikipedia Link</a>
     </li>
     <li>
         <h2>Suriname</h2>
-        <img src="images\sr.png">
+        <img src="images/sr.png" alt="Flag of Suriname">
         <p>Currency: SRD</p>
         <p>Regions: Brokopondo, Commewijne, Coronie, Marowijne, Nickerie, Para, Paramiribo, Saramacca, Sipaliwini, Wanica</p>
         <a href="https://en.wikipedia.org/wiki/Suriname">Wikipedia Link</a>
     </li>
     <li>
         <h2>Sweden</h2>
-        <img src="images\se.png">
+        <img src="images/se.png" alt="Flag of Sweden">
         <p>Currency: SEK</p>
         <p>Regions: </p>
         <p>Regions: Blekinge, Dalarna, Gotland, Gavleborg, Halland, Jamtland, Jonkoping, Kalmar, Kronoberg, Norrbotten, Skane, Stockholm. Sodermanland, Uppsala, Varmland, Vasterbotten, Vasternorrland, Vastmandland, Orebro, Ostergotland</p>
@@ -104,62 +109,210 @@
     </li>
     <li>
         <h2>Switzerland</h2>
-        <img src="images\ch.png">
+        <img src="images/ch.png" alt="Flag of Switzerland">
         <p>Currency: CHF</p>
         <p>Regions: Jungfraujoch, Santis, Arosa, La Chaux-de-Fonds, Bern, Sion, Locarno</p>
         <a href="https://en.wikipedia.org/wiki/Switzerland">Wikipedia Link</a>
     </li>
     <li>
         <h2>Syrian Arab Republic</h2>
-        <img src="images\sy.png">
+        <img src="images/sy.png" alt="Flag of Syrian Arab Republic">
         <p>Currency: SYP</p>
         <p>Regions: ar-Raqqah, al-Hasakah, Deir ez-Zor</p>
         <a href="https://en.wikipedia.org/wiki/Syrian_Arab_Republic">Wikipedia Link</a>
     </li>
     <li>
         <h2>Tajikistan</h2>
-        <img src="images\tj.png">
+        <img src="images/tj.png" alt="Flag of Tajikistan">
         <p>Currency: TJS</p>
-        <p>Regions: </p>
         <p>Regions: Viloyati Mukhtor, Viloyatho,Dushanbe </p>
         <a href="https://en.wikipedia.org/wiki/Tajikistan">Wikipedia Link</a>
     </li>
     <li>
         <h2>Tanzania</h2>
-        <img src="images\tz.png">
+        <img src="images/tz.png" alt="Flag of Tanzania">
         <p>Currency: TZS</p>
         <p>Regions: Arusha, Dar es Sakaam, Dodoma, Geita, Iringa, Kagera, Katavi, Kigoma, Mtwara, Mwanza, Ruvuma, Shinyanga, Tabora, Unguja</p>
         <a href="https://en.wikipedia.org/wiki/Tanzania">Wikipedia Link</a>
     </li>
     <li>
         <h2>Thailand</h2>
-        <img src="images\th.png">
+        <img src="images/th.png" alt="Flag of Thailand">
         <p>Currency: THB</p>
         <p>Regions: Northern Thailand, Northeastern Thailand, Western Thailand, Central Thailand, Eastern Thailand, Southern Thailand</p>
         <a href="https://en.wikipedia.org/wiki/Thailand">Wikipedia Link</a>
     </li>
     <li>
         <h2>Timor-Leste</h2>
-        <img src="images\tl.png">
+        <img src="images/tl.png" alt="Flag of Timor-Lese">
         <p>Currency: USD</p>
         <p>Regions: Kupang, Oelamasi, Kefamenanu, Atambua, Soe, Betun</p>
         <a href="https://en.wikipedia.org/wiki/East_Timor">Wikipedia Link</a>
     </li>
     <li>
         <h2>Togo</h2>
-        <img src="images\tg.png">
+        <img src="images/tg.png" alt="Flag of Togo">
         <p>Currency: XOF</p>
         <p>Regions: Savanes, Kara, Centrale, Plateaux, Maritime</p>
         <a href="https://en.wikipedia.org/wiki/Togo">Wikipedia Link</a>
     </li>
     <li>
         <h2>Tonga</h2>
-        <img src="images\to.png">
+        <img src="images/to.png" alt="Flag of Tonga">
         <p>Currency: TOP</p>
         <p>Regions: Ha'apai, Tongatapu, Vava'u, Nuku'alofa</p>
         <a href="https://en.wikipedia.org/wiki/Tonga">Wikipedia Link</a>
     </li>
     
+  </ul> 
+<h1> Countries:</h1>
+<!-- unordered list of countires-->
+<ul class="countries">
+    <li>
+        <h2>Singapore</h2>
+        <img src="images/sg.png" alt="Flag of Singapore">
+        <p>Currency: SGD</p>
+       <p>Regions: Central Area, Tampines, Woodlands, Seletar, Jurong East<p>
+        <a href="https://en.wikipedia.org/wiki/Singapore">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Slovakia</h2>
+          <img src="images/sk.png" alt="Flag of Slovakia">
+          <p>Currency: EUR</p>
+          <p>Regions: Bratislava, Tnrnava, Trencin, Nitra, Zilina, Banska Bystrica, Presov, Kosice</p>
+          <a href="https://en.wikipedia.org/wiki/Slovakia">Wikipedia Link</a>
+        </li>
+  
+        <li>
+          <h2>Slovenia</h2>
+          <img src="images/si.png" alt="Flag of Slovakia">
+          <p>Currency: EUR</p>
+          <p>Regions: Mura, Drava, Carinthia, Savinja, Central Sava, Lower Sava, Carniola, Gorizia, Coastal-Karst</p>
+          <a href="https://en.wikipedia.org/wiki/Slovenia">Wikipedia Link</a>
+        </li>
+      
+        <li>
+          <h2>Solomon Islands</h2>
+          <img src="images/sb.png" alt="Flag of Solomon Islands">
+          <p>Currency: SBD</p>
+          <p>Regions: Central, Choiseul, Guadalcanal, Isabel, Makira-Ulawa, Malaita, Rennel and Bellona, Temotu, Western</p>
+          <a href="https://en.wikipedia.org/wiki/Solomon_Islands">Wikipedia Link</a>
+        </li>
+      
+        <li>
+          <h2>Somalia</h2>
+          <img src="images/so.png" alt="Flag of Somalia">
+          <p>Currency: SOS</p>
+          <p>Regions: Benadir, Burao, Hargeisa, Hiran, Lower Juba, Bosaso, Mudug, Upper Juba</p>
+          <a href="https://en.wikipedia.org/wiki/Somalia">Wikipedia Link</a>
+        </li>
+      
+        <li>
+          <h2>South Africa</h2>
+          <img src="images/za.png" alt="Flag of South Africa">
+          <p>Currency: ZAR</p>
+          <p>Regions: Botswana, Eswatini, Lesotho, Nimbia, South Africa</p>
+          <a href="https://en.wikipedia.org/wiki/South_Africa">Wikipedia Link</a>
+        </li>
+        <li>
+          <h2>South Sudan</h2>
+          <img src="images/ss.png " alt="Flag of South Sudan">
+          <p>Currency: SSP</p> 
+          <p>Regions: Lakes, Warrap, Western Equatoria, Jonglei, Unity, Upper Nile, Abyei Area, Greater Pibor Area, Ruweng</p>
+          <a href="https://en.wikipedia.org/wiki/South_Sudan">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Spain</h2>
+          <img src="images/es.png" alt= "Flag of Spain">
+          <p>Currency: EUR</p>
+          <p>Regions: Andalusia, Aragon, Asturias, Balearic Islands, Basque Country, Canaray Islands, Cantabria, Castile and Leon, Castilla La Mancha, Catalonia, Galicia, Madrid, Murcis, Navarre, Valencia</p>
+          <a href="https://en.wikipedia.org/wiki/Spain">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Sri Lanka</h2>
+          <img src="images/lk.png" alt="Flag of Sri Lanka">
+          <p>Currency: LKR</p>
+          <p>Regions: Northern Province, North Central Province, North Western Province, Western Province, Southern Province, Uva Province</p>
+          <a href="https://en.wikipedia.org/wiki/Sri_Lanka">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Sudan</h2>
+          <img src="images/sd.png" alt="Flag of Sudan"> 
+          <p>Currency: SDG</p>
+          <p>Regions: Sudanian savanna</p>
+          <a href="https://en.wikipedia.org/wiki/Sudan">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Suriname</h2>
+          <img src="images/sr.png" alt="Flag of Suriname">
+          <p>Currency: SRD</p>
+          <p>Regions: Brokopondo, Commewijne, Coronie, Marowijne, Nickerie, Para, Paramiribo, Saramacca, Sipaliwini, Wanica</p>
+          <a href="https://en.wikipedia.org/wiki/Suriname">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Sweden</h2>
+          <img src="images/se.png" alt="Flag of Sweden">
+          <p>Currency: SEK</p>
+          <p>Regions: </p>
+          <p>Regions: Blekinge, Dalarna, Gotland, Gavleborg, Halland, Jamtland, Jonkoping, Kalmar, Kronoberg, Norrbotten, Skane, Stockholm. Sodermanland, Uppsala, Varmland, Vasterbotten, Vasternorrland, Vastmandland, Orebro, Ostergotland</p>
+          <a href="https://en.wikipedia.org/wiki/Sweden">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Switzerland</h2>
+          <img src="images/ch.png" alt="Flag of Switzerland">
+          <p>Currency: CHF</p>
+          <p>Regions: Jungfraujoch, Santis, Arosa, La Chaux-de-Fonds, Bern, Sion, Locarno</p>
+          <a href="https://en.wikipedia.org/wiki/Switzerland">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Syrian Arab Republic</h2>
+          <img src="images/sy.png" alt="Flag of Syrian Arab Republic">
+          <p>Currency: SYP</p>
+          <p>Regions: ar-Raqqah, al-Hasakah, Deir ez-Zor</p>
+          <a href="https://en.wikipedia.org/wiki/Syrian_Arab_Republic">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Tajikistan</h2>
+          <img src="images/tj.png" alt="Flag of Tajikistan">
+          <p>Currency: TJS</p>
+          <p>Regions: Viloyati Mukhtor, Viloyatho,Dushanbe </p>
+          <a href="https://en.wikipedia.org/wiki/Tajikistan">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Tanzania</h2>
+          <img src="images/tz.png" alt="Flag of Tanzania">
+          <p>Currency: TZS</p>
+          <p>Regions: Arusha, Dar es Sakaam, Dodoma, Geita, Iringa, Kagera, Katavi, Kigoma, Mtwara, Mwanza, Ruvuma, Shinyanga, Tabora, Unguja</p>
+          <a href="https://en.wikipedia.org/wiki/Tanzania">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Thailand</h2>
+          <img src="images/th.png" alt="Flag of Thailand">
+          <p>Currency: THB</p>
+          <p>Regions: Northern Thailand, Northeastern Thailand, Western Thailand, Central Thailand, Eastern Thailand, Southern Thailand</p>
+          <a href="https://en.wikipedia.org/wiki/Thailand">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Timor-Leste</h2>
+          <img src="images/tl.png" alt="Flag of Timor-Lese">
+          <p>Currency: USD</p>
+          <p>Regions: Kupang, Oelamasi, Kefamenanu, Atambua, Soe, Betun</p>
+          <a href="https://en.wikipedia.org/wiki/East_Timor">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Togo</h2>
+          <img src="images/tg.png" alt="Flag of Togo">
+          <p>Currency: XOF</p>
+          <p>Regions: Savanes, Kara, Centrale, Plateaux, Maritime</p>
+          <a href="https://en.wikipedia.org/wiki/Togo">Wikipedia Link</a>
+      </li>
+      <li>
+          <h2>Tonga</h2>
+          <img src="images/to.png" alt="Flag of Tonga">
+          <p>Currency: TOP</p>
+          <p>Regions: Ha'apai, Tongatapu, Vava'u, Nuku'alofa</p>
+          <a href="https://en.wikipedia.org/wiki/Tonga">Wikipedia Link</a>
+      </li>
 </ul>
 
 <!-- Embedded JavaScript go here -->

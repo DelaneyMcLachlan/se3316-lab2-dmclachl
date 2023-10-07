@@ -17,3 +17,13 @@
     padding: 8px; /* padding set to 8 pixels*/
     background-color: #B6B7B8; /* sets background colour of each list item */
 }
+
+#resultsSearchDisplay {
+
+    padding: 8px;
+    margin-top: 8px;
+    list-style-type: none;
+}
+
+
+
